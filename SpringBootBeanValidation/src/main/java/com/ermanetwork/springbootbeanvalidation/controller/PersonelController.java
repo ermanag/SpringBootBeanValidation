@@ -17,7 +17,7 @@ public class PersonelController {
     PersonelService personelService;
 
     @PostMapping("/save")
-    ResponseEntity<String> addStudent(@Valid @RequestBody Personel personel) {
+    ResponseEntity<String> savePersonel(@Valid @RequestBody Personel personel) {
         personelService.save(personel);
         return ResponseEntity.ok("Personel Ekleme Başarılı");
     }
